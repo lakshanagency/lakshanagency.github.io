@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/favicon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -490,7 +490,7 @@
               <div class="email">
                 <i class="ri-mail-line"></i>
                 <h4>Email:</h4>
-                <p>sanjayalaliagents@gmail.com</p>
+                <p><a href="mailto:lakshanagency1@gmail.com">lakshanagency1@gmail.com</a></p>
               </div>
 
               <div class="phone">
@@ -505,7 +505,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="mailto:lakshanagency1@gmail.com" method="post" role="form" id="form" class="php-email-form" data-form>
               <div class="form-row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
@@ -526,11 +526,11 @@
               </div>
               <div class="mb-3">
                 <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+
+            
 
           </div>
 
@@ -545,7 +545,7 @@
   <footer id="footer">
     <div class="container">
       <h1 class="logo"><a href="index.html"><img src="./assets/img/logo2.png" height="60px;" width="160px"></a></h1>
-      <p>Start your future with Sanjaya Lali Manpower</p>
+      <p>Start your future with Lakshan Foreign Employment Agency</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -554,7 +554,7 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>Sanjaya Lali Manpower</span></strong>. All Rights Reserved ©  <script>document.write(new Date().getFullYear())</script></p>
+        &copy; Copyright <strong><span>Lakshan Foreign Employment Agency</span></strong>. All Rights Reserved ©  <script>document.write(new Date().getFullYear())</script></p>
       </div>
       
     </div>
@@ -573,6 +573,16 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+  <script>
+    document.getElementById("form").addEventListener("submit", function(e){
+   e.preventDefault();
+   var email = document.getElementById("email").value;
+   window.open('mailto:'+email);
+   
+
+})
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
