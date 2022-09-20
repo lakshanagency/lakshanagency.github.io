@@ -31,32 +31,46 @@
 </head>
 
 <body>
-  <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v9.0'
-          });
-        };
+  <!-- ======= FB Feed ======= -->
 
-        (function(d, s, id) {
+  <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="fsHhgemX"></script>
+
+
+
+
+
+  <!-- Load Facebook SDK for JavaScript -->
+      <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "107393682125814");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your Chat Plugin code -->
-      <div class="fb-customerchat"
-        attribution="setup_tool"
-        page_id="105188268156382"
-        theme_color="#00cc81"
-        logged_in_greeting="Hi! How can we help you?"
-        logged_out_greeting="Hi! How can we help you?">
-      </div>
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 
   <!-- ======= Header ======= -->
 
@@ -121,6 +135,8 @@
 
   <main id="main">
 
+    
+
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container">
@@ -154,6 +170,7 @@
 
       </div>
     </section><!-- End About Us Section -->
+   
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
@@ -226,7 +243,7 @@
             <div class="icon-box mt-5">
               <i class='bx bxl-visa'></i>
               <h4>VISA</h4>
-              <p>We offer both Student and Working Visa in Japan.</p>
+              <p>We offer both Student and Working Visa.</p>
             </div>
             <div class="icon-box mt-5">
               <i class="bx bx-cube-alt"></i>
@@ -244,7 +261,15 @@
               <p>We have more than 50 success stories in foreign employment  and we are registered company in Sri Lanka</p>
             </div>
           </div>
-          <div class="image col-lg-6 order-1 order-lg-2" style='background-image: url("assets/img/features.jpg");'></div>
+          <div class="image col-lg-6 order-1 order-lg-2">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="fb-page" data-href="https://www.facebook.com/lakshanagency" 
+              data-tabs="timeline" data-width="50000" data-height="500" data-small-header="false" 
+              data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+              <blockquote cite="https://www.facebook.com/lakshanagency" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/lakshanagency">Lakshan Foreign Employment Agency</a>
+              </blockquote></div>
+          </div>
         </div>
 
       </div>
@@ -293,11 +318,11 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Gallery</h2>
-          <p>Here are some of our clients preparing for the foreign job market</p>
+          <h2>Meet Our Team</h2>
+          <p>Here are the management behind our agency</p>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
@@ -306,15 +331,15 @@
               
             </ul>
           </div>
-        </div>
+        </div> -->
 
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
+              <h4>Management</h4>
+              <p>Managing Director</p>
               <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -323,28 +348,20 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
+              <h4>Management</h4>
+              <p>Director</p>
               <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
+          
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
+              <h4>Consultation</h4>
+              <p>Clients</p>
               <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
@@ -353,8 +370,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
+              <h4>Ceremony</h4>
+              <p>Opening</p>
               <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
